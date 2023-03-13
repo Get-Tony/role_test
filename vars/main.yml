@@ -1,0 +1,4 @@
+---
+# vars file for common
+
+distro_tasks_dir: "distro_tasks"
