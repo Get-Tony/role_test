@@ -1,34 +1,6 @@
 ---
-# tasks file for common
+# tasks file for test
 
-- name: Install distro packages
-  when: common_packages is defined and common_packages | length > 0
-  ansible.builtin.package:
-    name: "{{ item }}"
-    state: present
-  with_items: "{{ common_packages }}"
-
-- name: Include linux-global tasks
-  ansible.builtin.include_tasks: "{{ distro_tasks_dir }}/00-linux-global.yml"
-
-- name: Include Distro-specific tasks
-  vars:
-    params:
-      files:
-        - "{{ ansible_distribution }}.yml"
-      paths: "{{ distro_tasks_dir }}"
-      skip: true
-    files: "{{ lookup('first_found', params) }}"
-  ansible.builtin.include_tasks: "{{ files }}"
-  when: files
-
-- name: Include "Major Version"-specific tasks
-  vars:
-    params:
-      files:
-        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-      paths: "{{ distro_tasks_dir }}"
-      skip: true
-    files: "{{ lookup('first_found', params) }}"
-  ansible.builtin.include_tasks: "{{ files }}"
-  when: files
+- name: Greet the world
+  debug:
+    msg: "Hello, world!"
