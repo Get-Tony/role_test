@@ -1,6 +1,6 @@
 ---
 # tasks file for test
 
-- name: Print the hostname and IP address
+- name: Print all IPv4 addresses
   debug:
-    msg: "The hostname is {{ inventory_hostname }} and the IP address is {{ ansible_host }}"
+    msg: "The hostname is {{ inventory_hostname }}, IP address(s): {{ ansible_all_ipv4_addresses }}"
