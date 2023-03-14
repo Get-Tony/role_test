@@ -13,18 +13,10 @@ Dependencies
 
 None.
 
-Example Playbook
-----------------
-
-    - name: Apply common configuration to all servers
-      hosts: managed
-      roles:
-         - TBD
-
 License
 -------
 
-All rights reserved.
+MIT
 
 Author Information
 ------------------
