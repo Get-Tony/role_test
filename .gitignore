@@ -157,7 +157,3 @@ dmypy.json
 # Logs
 **/logs/
 **/*.log
-
-# Included to perserve local dev environments.
-roles/*
-
