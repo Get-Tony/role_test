@@ -1,6 +1,9 @@
 ---
 # tasks file for test
 
+- name: Gather Facts
+  setup:
+
 - name: Print all IPv4 addresses
   debug:
     var: ansible_all_ipv4_addresses
