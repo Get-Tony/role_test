@@ -1,8 +1,10 @@
 ---
 # tasks file for test
 
-- name: Gather Facts
-  setup:
+- name: Gather network facts
+  ansible.builtin.setup:
+    gather_subset:
+      - network
 
 - name: Print all IPv4 addresses
   debug:
