@@ -21,4 +21,4 @@ MIT
 Author Information
 ------------------
 
-This role was created in 2022 by Anthony Pagan.
+This role was created in 2022 by [Anthony Pagan](https://github.com/get-tony).
