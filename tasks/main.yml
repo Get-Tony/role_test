@@ -7,5 +7,5 @@
       - network
 
 - name: Print all IPv4 addresses
-  debug:
+  ansible.builtin.debug:
     var: ansible_all_ipv4_addresses
